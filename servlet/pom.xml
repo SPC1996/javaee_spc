@@ -15,6 +15,7 @@
 
     <modules>
         <module>servlet_simple_servlet</module>
+        <module>servlet_servlet_filters</module>
     </modules>
 
     <build>
