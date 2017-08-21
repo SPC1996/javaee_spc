@@ -19,6 +19,7 @@
         <module>servlet_async_servlet</module>
         <module>servlet_error_mapping</module>
         <module>servlet_cookies</module>
+        <module>servlet_file_upload</module>
     </modules>
 
 
