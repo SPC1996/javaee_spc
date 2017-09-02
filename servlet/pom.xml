@@ -23,6 +23,7 @@
         <module>servlet_event_listeners</module>
         <module>servlet_metadata_complete</module>
         <module>servlet_nonblocking</module>
+        <module>servlet_program_register</module>
     </modules>
 
 
