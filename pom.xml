@@ -11,6 +11,7 @@
 
     <modules>
         <module>servlet</module>
+        <module>tiny_spring</module>
     </modules>
 
     <dependencies>
