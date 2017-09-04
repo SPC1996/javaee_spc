@@ -24,7 +24,6 @@ public abstract class AbstractBeanFactory implements BeanFactory {
         return bean;
     }
 
-    @Override
     public void registerBeanDefinition(String name, BeanDefinition beanDefinition) throws IllegalAccessException, NoSuchFieldException, InstantiationException {
         beanDefinitionMap.put(name, beanDefinition);
         beanDefinitionNames.add(name);
