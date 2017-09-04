@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <beans>
+    <bean name="outputService" class="com.keessi.tiny_spring.beans.OutputService">
+        <property name="helloWorldService" ref="helloWorldService"/>
+    </bean>
+
     <bean name="helloWorldService" class="com.keessi.tiny_spring.beans.HelloWorldService">
         <property name="text" value="Hello World!"/>
+        <property name="outputService" ref="outputService"/>
     </bean>
 </beans>

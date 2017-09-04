@@ -2,6 +2,7 @@ package com.keessi.tiny_spring.beans.xml;
 
 import com.keessi.tiny_spring.beans.AbstractBeanDefinitionReader;
 import com.keessi.tiny_spring.beans.BeanDefinition;
+import com.keessi.tiny_spring.beans.BeanReference;
 import com.keessi.tiny_spring.beans.PropertyValue;
 import com.keessi.tiny_spring.beans.io.ResourceLoader;
 import org.w3c.dom.Document;
@@ -65,7 +66,16 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader {
                 Element propertyElement = (Element) node;
                 String name = propertyElement.getAttribute("name");
                 String value = propertyElement.getAttribute("value");
-                beanDefinition.getPropertyValues().addPropertyValue(new PropertyValue(name, value));
+                if (value != null && value.length() > 0) {
+                    beanDefinition.getPropertyValues().addPropertyValue(new PropertyValue(name, value));
+                } else {
+                    String ref = propertyElement.getAttribute("ref");
+                    if (ref == null || ref.length() == 0) {
+                        throw new IllegalArgumentException("Configuration problem: <property> element for property " + name + " must specify a ref or value");
+                    }
+                    BeanReference beanReference = new BeanReference(ref);
+                    beanDefinition.getPropertyValues().addPropertyValue(new PropertyValue(name, beanReference));
+                }
             }
         }
     }
