@@ -11,4 +11,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>tiny_spring</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>aopalliance</groupId>
+            <artifactId>aopalliance</artifactId>
+            <version>1.0</version>
+        </dependency>
+    </dependencies>
 </project>

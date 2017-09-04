@@ -4,7 +4,7 @@
         <property name="helloWorldService" ref="helloWorldService"/>
     </bean>
 
-    <bean name="helloWorldService" class="com.keessi.tiny_spring.beans.HelloWorldService">
+    <bean name="helloWorldService" class="com.keessi.tiny_spring.beans.HelloWorldServiceImp">
         <property name="text" value="Hello World!"/>
         <property name="outputService" ref="outputService"/>
     </bean>
