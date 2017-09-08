@@ -1,0 +1,5 @@
+package com.keessi.tiny_spring.aop;
+
+public interface PointcutAdvisor extends Advisor {
+    Pointcut getPointcut();
+}

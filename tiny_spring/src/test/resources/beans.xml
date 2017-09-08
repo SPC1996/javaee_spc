@@ -8,4 +8,6 @@
         <property name="text" value="Hello World!"/>
         <property name="outputService" ref="outputService"/>
     </bean>
+
+    <bean name="beanInitializeLogger" class="com.keessi.tiny_spring.beans.BeanInitializeLogger"/>
 </beans>

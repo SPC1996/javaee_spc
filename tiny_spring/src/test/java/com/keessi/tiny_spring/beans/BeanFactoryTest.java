@@ -2,7 +2,6 @@ package com.keessi.tiny_spring.beans;
 
 import com.keessi.tiny_spring.beans.factory.AbstractBeanFactory;
 import com.keessi.tiny_spring.beans.factory.AutowireCapableBeanFactory;
-import com.keessi.tiny_spring.beans.factory.BeanFactory;
 import com.keessi.tiny_spring.beans.io.ResourceLoader;
 import com.keessi.tiny_spring.beans.xml.XmlBeanDefinitionReader;
 import org.junit.Test;
